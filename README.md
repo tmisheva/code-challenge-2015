@@ -2,7 +2,7 @@
 ```
 composer install
 ```
-- You may have errors doing this, until you fix the code!) - hit enter and skip all things database.
+- You may have errors doing this, until you fix the code! - hit enter and skip all things database.
 
 # What you need to do
 - Fix the code so that all the tests pass successfully
@@ -11,5 +11,5 @@ composer install
 
 # How to run the tests
 ```
-./bin/phpunit src/TimeInc/CatsVsDogsBundle/Tests/AnimalProvider/Giphy/GiphyProviderTest.php
+./bin/phpunit -c app
 ```
