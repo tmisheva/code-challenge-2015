@@ -1,0 +1,45 @@
+{% extends 'TimeIncCatsVsDogsBundle::layout.html.twig' %}
+
+{% block body %}
+    <style>
+        .header-title {
+            text-align: center;
+            font-size: 100px;
+            text-transform: uppercase;
+        }
+    </style>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="poll-container" align="center" data-cat="{{ cat.imageSrc }}" data-dog="{{ dog.imageSrc }}">
+                <script type="text/javascript" charset="utf-8" src="http://static.polldaddy.com/p/9081870.js"></script>
+                <noscript><a href="http://polldaddy.com/poll/9081870/">Symfony Live London 2015 - Cat vs. Dog</a></noscript>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // This is really dirty but was written in 5 mins, so meh.
+        var pollContainer = $('.poll-container'),
+            anchors = $('.pds-answer-group');
+            answers = ['cat', 'dog'];
+
+        anchors.each(function( index ) {
+            var container = $(this);
+            var a = container.find('a');
+            var img = a.find('img');
+            var input = container.find('input')[0];
+
+            a.attr('href', pollContainer.data(answers[index]));
+
+            img.attr('src', pollContainer.data(answers[index]));
+            img.attr('width', '100%');
+            img.removeAttr('height');
+
+            a.click(function(e) {
+                e.preventDefault();
+                input.checked = true;
+            });
+        });
+    </script>
+{% endblock body %}

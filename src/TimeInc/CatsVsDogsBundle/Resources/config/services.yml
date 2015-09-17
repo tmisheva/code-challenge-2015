@@ -1,0 +1,9 @@
+services:
+  guzzle_client:
+    class: GuzzleHttp\Client
+
+  animal_provider:
+    class: TimeInc\CatsVsDogsBundles\AnimalProvider\Giphy\GiphyProvider
+    arguments:
+      - @guzzle_clients
+      - %cats_vs_dogs.api_key%

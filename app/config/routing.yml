@@ -1,0 +1,3 @@
+time_inc_cats_vs_dogs:
+    resource: "@TimeIncCatsVsDogsBundle/Resources/config/routing.yml"
+    prefix:   /

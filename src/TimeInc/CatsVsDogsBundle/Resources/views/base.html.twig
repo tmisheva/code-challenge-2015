@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cats VS Dogs!</title>
+
+    <!-- We all know that cats will win -->
+    <link rel="stylesheet" href="{{ asset('/bundles/timeinccatsvsdogs/css/bootstrap.min.css') }}">
+
+    <script src="{{ asset('/bundles/timeinccatsvsdogs/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('/bundles/timeinccatsvsdogs/js/bootstrap.min.js') }}"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <p class="navbar-text">
+                Cats VS Dogs! <em>The ultimate cuteness battle!</em>
+            </p>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        {% block body %}
+        {% endblock body %}
+    </div>
+</body>
+</html>
+
+
