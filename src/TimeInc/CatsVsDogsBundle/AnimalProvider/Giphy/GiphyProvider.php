@@ -18,6 +18,7 @@ use TimeInc\CatsVsDogsBundle\Document\Dog;
  */
 class GiphyProvider implements ProviderInterface
 {
+    const TYPE_FISH = 'fish';
     const TYPE_CAT = 'cat';
     const TYPE_DOG = 'dog';
 
@@ -58,6 +59,7 @@ class GiphyProvider implements ProviderInterface
         $animal->setWidth($payload['data']['image_width']);
         $animal->setHeight($payload['data']['image_height']);
 
+
         return $animal;
     }
 
@@ -76,7 +78,7 @@ class GiphyProvider implements ProviderInterface
         $animal->setWidth($payload['data']['image_width']);
         $animal->setHeight($payload['data']['image_height']);
 
-        return $payload;
+        return $animal;
     }
 
     /**
@@ -91,7 +93,7 @@ class GiphyProvider implements ProviderInterface
      */
     protected function doApiRequest($type)
     {
-        if ($type !== self::TYPE_FISH && $type !== self::TYPE_DOG) {
+        if ($type !== self::TYPE_CAT && $type !== self::TYPE_DOG) {
             throw new InvalidAnimalTypeException($type, [self::TYPE_CAT, self::TYPE_DOG]);
         }
 
