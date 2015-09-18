@@ -1,3 +1,9 @@
+# Win a new Apple TV at Symfony Live
+
+Fork this repo, get it running and send us a pull request to enter. We'll randomly pick a winner from all the entrants so don't worry if yours isn't perfect!
+
+We'll announce the winner at the end of the day.
+
 # Get this repo up and running
 ```
 composer install
